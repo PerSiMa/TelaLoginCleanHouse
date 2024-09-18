@@ -4,39 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/stylecad.css" rel="stylesheet" type="text/css" />
+    <link href="../css/stylecad.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
 
-<body style="background-color:rgb(22,150,205)">
+<body>
 
-    <header class="head">
+    <header class="header">
         <div class="head1">
-            <img loading="lazy" src="../img/logo.jpeg" width="80,80" />
+            <img loading="lazy" src="../img/logo.jpeg" width="100,100" />
             <input placeholder="      Pesquise aqui" type="text">
         </div>
 
         <div class="head2">
-            <img loading="lazy" src="../img/perfil.png" width="43,43" />
+            <img loading="lazy" src="../img/perfil.png" width="45,45" />
             <p>ENTRE ou CADASTRE-SE</p>
         </div>
     </header>
 
+    <header class="header2">
+        <p>Serviços</p>
+        <p>Procuro emprego</p>
+        <p>Fale conosco</p>
+    </header>
+
     <span class="spanform">
         <form class="form">
-            <p style="font-size: 40px">CADASTRO</p>
+            <div id="topform">
+                <p id="text1">Quero me cadastrar</p>
+                <p id="text2">Para minha empresa</p>
+            </div>
             <div>
-                <p>Usuário</p>
-                <input placeholder="Digite seu usuário" type="text">
+                <p>Email</p>
+                <input placeholder="Digite seu email" type="text">
+            </div>
+            <div>
+                <p>Nome completo</p>
+                <input placeholder="Digite seu nome completo" type="text">
+            </div>
+            <div>
+                <p>Telefone</p>
+                <input placeholder="Digite seu telefone" type="text">
+            </div>
+            <div>
+                <p>CPF</p>
+                <input placeholder="Digite seu CPF" type="text">
             </div>
             <div>
                 <p>Senha</p>
                 <input placeholder="Digite sua senha" type="text">
             </div>
-            <button>ACESSAR</button>
-            <p id="cadastre-se">Não possui conta ? Cadastre-se</p>
+            <button>CADASTRAR</button>
+
+            <a href="login.html" id="cadastre-se">Já possui uma conta ? Clique para logar</a>
         </form>
     </span>
+
+    <footer class="foot">
+        <span class="info">
+            <img loading="lazy" src="../img/logo.jpeg" width="100,100" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dignissimos aut ipsam omnis qui consequatur
+                nostrum quod iste placeat, inventore, similique mollitia vel at soluta quos minus tempora ut asperiores.
+            </p>
+            <div class="redes">
+                <img loading="lazy" src="../img/logos/facebook.png" />
+                <img loading="lazy" src="../img/logos/twitter.png" />
+                <img loading="lazy" src="../img/logos/linkedin.png" />
+                <img loading="lazy" src="../img/logos/instagram.png" style="width:28px; height:28px; padding:5px;" />
+            </div>
+        </span>
+
+        <div class="tables">
+            <div>
+                <p id="serv">Serviços</p>
+                <p>House cleaning</p>
+                <p>Office cleaning</p>
+                <p>Window cleaning</p>
+                <p>Floor cleaning</p>
+            </div>
+
+            <div>
+                <p id="links">Links</p>
+                <p>Home</p>
+                <p>Serviços</p>
+                <p>Procuro emprego</p>
+                <p>Fale conosco</p>
+            </div>
+
+            <div>
+                <p id="cont">Contato</p>
+
+                <div class="iconetexto">
+                    <div>
+                        <img src="../img/icones/phone.png" width="20px 20px" />
+                        <p>(+15) 9999-9999</p>
+                    </div>
+                    <div>
+                        <img src="../img/icones/mail.png" width="20px 20px" />
+                        <p>Info@gmail.com</p>
+                    </div>
+                    <div>
+                        <img src="../img/icones/location.png" width="20px 20px" />
+                        <p>584 São Paulo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="direitos">
+        <p>Copyright by Cleanhouse @ 2024. All rights reserved</p>
+    </div>
 
 </body>
 

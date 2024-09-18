@@ -3,9 +3,9 @@
     padding: 0;
 }
 
-.head {
-    width: 100vw;
-    height: 95px;
+.header {
+    width: 100%;
+    height: 110px;
     background-color: white;
     display: flex;
     justify-content: flex-end;
@@ -19,8 +19,8 @@
 
 .head1 input {
     transition: border-color 0.3s;
-    width: 300px;
-    height: 30px;
+    width: 350px;
+    height: 35px;
     border-radius: 30px;
     border-width: 2px;
     border-color: black;
@@ -37,9 +37,9 @@
     color: black;
     font-family: "Gill Sans", sans-serif;
     font-weight: 500;
-    font-size: 11px;
-    width: 170px;
-    margin-left: 590px;
+    font-size: 14px;
+    width: 180px;
+    margin-left: 560px;
     margin-right: 50px;
     display: flex;
     align-items: center;
@@ -50,19 +50,39 @@
     color: rgb(22, 150, 205);
 }
 
+.header2 {
+    background-color: rgb(64, 124, 204);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    font-size: 20px;
+}
+
+.header2 p {
+    transition: color 0.3s, border-bottom 0.3s;
+    color: white;
+    border-bottom: solid white 1px;
+    padding: 1px;
+}
+
+.header2 p:hover {
+    color: rgb(9, 13, 130);
+    border-bottom: solid rgb(9, 13, 130) 1px;
+}
+
 .spanform {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 840px;
+    width: 100%;
+    height: 700px;
 }
 
 .form {
-    gap: 20px;
-    background-color: white;
+    gap: 24px;
     border-radius: 20px;
-    padding: 100px 50px;
     width: 330px;
     height: 250px;
     display: flex;
@@ -92,15 +112,20 @@
     color: rgb(9, 13, 130);
 }
 
+.form a {
+    font-size: 18px;
+    color: rgb(9, 13, 130);
+}
+
 .form button {
     transition: background-color 0.3s, width 0.3s, padding 0.3s;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: "Gill Sans", sans-serif;
-    width: 150px;
-    padding: 13px 10px;
+    width: 100%;
+    padding: 13px;
     border-radius: 5px;
-    background-color: rgb(9, 13, 130);
+    background-color: rgb(64, 124, 204);
     color: white;
     font-size: 15px;
     border-width: 0px;
@@ -109,8 +134,7 @@
 
 .form button:hover {
     background-color: rgb(22, 150, 205);
-    width: 165px;
-    padding: 15px;
+    padding: 16px;
 }
 
 #cadastre-se {
@@ -121,4 +145,124 @@
 #cadastre-se:hover {
     text-decoration: underline;
     color: rgb(194, 0, 194);
+}
+
+#topform {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#text1 {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+#text2 {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    color: rgb(64, 124, 204);
+    font-weight: bold;
+}
+
+.foot {
+    gap: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(9, 13, 130);
+}
+
+.info {
+    font-size: 15px;
+    color: white;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.redes {
+    display: flex;
+    gap: 30px;
+}
+
+.redes img {
+    transition: background-color 0.3s;
+    background-color: rgb(22, 150, 205);
+    width: 20px;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.redes img:hover {
+    background-color: rgb(23, 156, 213);
+}
+
+.tables {
+    display: flex;
+    gap: 100px;
+}
+
+.tables div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tables p {
+    transition: color 0.3s;
+    color: rgb(186, 186, 186);
+}
+
+.tables p:hover {
+    color: white;
+}
+
+#serv {
+    font-size: 20px;
+    color: white;
+    border-bottom: solid white 1.5px;
+    padding-bottom: 5px;
+}
+
+#links {
+    font-size: 20px;
+    color: white;
+    border-bottom: solid white 1.5px;
+    padding-bottom: 5px;
+}
+
+#cont {
+    font-size: 20px;
+    color: white;
+    border-bottom: solid white 1.5px;
+    padding-bottom: 5px;
+}
+
+.iconetexto div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.direitos {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 13, 130);
+    padding-bottom: 30px;
+}
+
+.direitos p {
+    border-top: solid white 1px;
+    padding: 8px;
+    color: white;
 }
