@@ -39,7 +39,7 @@
     font-weight: 500;
     font-size: 11px;
     width: 170px;
-    margin-left: 410px;
+    margin-left: 590px;
     margin-right: 50px;
     display: flex;
     align-items: center;
@@ -51,12 +51,11 @@
 }
 
 .spanform {
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 650px;
+    height: 840px;
 }
 
 .form {
