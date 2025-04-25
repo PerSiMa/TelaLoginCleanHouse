@@ -12,7 +12,6 @@
 
 - Bruna Andrade Alves  
 - Giovana Beatriz Ferreira  
-- Gustavo Cezar  
 - Gustavo Kazuyuki Matsunaka  
 - Kayque Dias Moreno  
 - Nelson Gilberto  
