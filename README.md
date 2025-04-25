@@ -1,151 +1,108 @@
-🧼 Clean House - Plataforma de Serviços
+---
 
+# 🧼 Clean House - Plataforma de Serviços
 
+![Badge Status](https://img.shields.io/badge/status-prototipo-blue)  
+![Badge Projeto](https://img.shields.io/badge/projeto-integrador-success)  
+![Badge Ano](https://img.shields.io/badge/ano-2025-lightgrey)
 
-Protótipo de uma plataforma intuitiva e funcional para conectar clientes a prestadores de serviços residenciais.
+---
 
-👥 Equipe
+## 👥 Equipe
 
-Bruna Andrade Alves
+- Bruna Andrade Alves  
+- Giovana Beatriz Ferreira  
+- Gustavo Cezar  
+- Gustavo Kazuyuki Matsunaka  
+- Kayque Dias Moreno  
+- Nelson Gilberto  
+- Pedro José Sieiro Marques  
 
-Giovana Beatriz Ferreira
+---
 
-Gustavo Cezar
+## 📌 Sobre o Projeto
 
-Gustavo Kazuyuki Matsunaka
+O **Clean House** foi desenvolvido como parte do Projeto Integrador do curso de Engenharia de Software da UNIFIO (Centro Universitário de Ourinhos). O objetivo principal é simular uma **plataforma para contratação de serviços domésticos**, com foco em usabilidade, validação de dados e experiência do usuário.
 
-Kayque Dias Moreno
+---
 
-Nelson Gilberto
+## 🧾 Funcionalidades do Cadastro
 
-Pedro José Sieiro Marques
+### ✍️ Campos do Formulário
 
-📌 Sobre o Projeto
+- 📧 **Email**  
+- 👤 **Nome completo**  
+- 📱 **Telefone com DDD**  
+- 🆔 **CPF (com validação de dígitos)**  
+- 🔒 **Senha (mínimo de 6 caracteres + botão para visualização)**  
+- ☑️ **Checkbox de aceite dos Termos de Uso**
 
-O Clean House foi desenvolvido como parte do Projeto Integrador do curso de Engenharia de Software da UNIFIO (Centro Universitário de Ourinhos). O objetivo principal é simular uma plataforma para contratação de serviços domésticos, com foco em usabilidade, validação de dados e experiência do usuário.
+### ✅ Regras de Validação
 
-🧾 Funcionalidades do Cadastro
+- Formato de e-mail válido  
+- Nome com pelo menos dois termos  
+- Telefone com DDD  
+- CPF válido  
+- Senha segura  
+- Checkbox obrigatório para habilitar o botão "Cadastrar"
 
-✍️ Campos do Formulário
+### 🛠 Comportamento Esperado
 
-📧 Email
+- Validação completa ao clicar em **Cadastrar**  
+- Exibição de **mensagem de sucesso**  
+- Redirecionamento para **dashboard** ou **perfil do usuário**
 
-👤 Nome completo
-
-📱 Telefone com DDD
-
-🆔 CPF (com validação de dígitos)
-
-🔒 Senha (mínimo de 6 caracteres + botão para visualização)
-
-☑️ Checkbox de aceite dos Termos de Uso
-
-✅ Regras de Validação
-
-Formato de e-mail válido
-
-Nome com pelo menos dois termos
-
-Telefone com DDD
-
-CPF válido
-
-Senha segura
-
-Checkbox obrigatório para habilitar o botão "Cadastrar"
-
-🛠 Comportamento Esperado
-
-Validação completa ao clicar em Cadastrar
-
-Exibição de mensagem de sucesso
-
-Redirecionamento para dashboard ou perfil do usuário
-
-✏️ Campos Editáveis
+### ✏️ Campos Editáveis
 
 Todos os campos podem ser atualizados na tela de perfil do usuário.
 
-❌ Ação de Cancelar
+### ❌ Ação de Cancelar
 
 Retorna para:
+- Tela inicial (home), ou  
+- Tela de login, conforme o fluxo anterior
 
-Tela inicial (home), ou
+---
 
-Tela de login, conforme o fluxo anterior
+## 🏠 Tela Inicial (Home)
 
-🗑️ Fluxo de Exclusão
+### 🔍 Campo de Busca
 
-graph TD
-A[Perfil do Usuário] --> B[Botão "Excluir conta"]
-B --> C{Confirmar exclusão?}
-C -- Sim --> D[Inativar conta e redirecionar]
-C -- Não --> E[Cancelar ação]
+Placeholder: `"Pesquise aqui"`  
+Funciona como uma **busca global**, permitindo filtros por:
 
-🏠 Tela Inicial (Home)
+- Tipo de serviço  
+- Nome do profissional  
+- Localidade  
+- Palavra-chave  
 
-🔍 Campo de Busca
-
-Placeholder: "Pesquise aqui"Funciona como uma busca global, permitindo filtros por:
-
-Tipo de serviço
-
-Nome do profissional
-
-Localidade
-
-Palavra-chave
-
-🧑‍🔧 Listagem (Futura Implementação)
+### 🧑‍🔧 Listagem (Futura Implementação)
 
 Colunas recomendadas:
 
-Profissional
+| Profissional | Especialidade | Localidade | Avaliação | Status |
+|--------------|---------------|------------|-----------|--------|
+| Maria Silva | Faxina Geral | Ourinhos/SP | ⭐⭐⭐⭐☆ | Ativo |
 
-Especialidade
+### 🎠 Cards Interativos
 
-Localidade
+- Navegação entre slides  
+- Abertura de detalhes do serviço/profissional  
+- Opção de **visualizar perfil** e **contratar serviço**
 
-Avaliação
+## 🚀 Futuras Funcionalidades
 
-Status
+- Sistema de login completo com autenticação segura  
+- Chat entre cliente e prestador  
+- Agenda com horários disponíveis  
+- Avaliações e feedback  
+- Painel administrativo  
 
-Maria Silva
+---
 
-Faxina Geral
+## 📫 Contato
 
-Ourinhos/SP
+Ficou com dúvidas, sugestões ou quer saber mais sobre o projeto?  
+Entre em contato com qualquer membro da equipe ou envie um e-mail para: **cleanhouse@unifio.edu.br**
 
-⭐⭐⭐⭐☆
-
-Ativo
-
-🎠 Cards Interativos
-
-Navegação entre slides
-
-Abertura de detalhes do serviço/profissional
-
-Opção de visualizar perfil e contratar serviço
-
-🎥 Prévia em Vídeo / GIF
-
-📽️ Insira aqui um gif curto ou vídeo demonstrando o fluxo de cadastro, login ou interação com os cards.
-
-Exemplo de ferramentas para gravar: Loom, Screenity, OBS Studio, etc.
-
-🚀 Futuras Funcionalidades
-
-Sistema de login completo com autenticação segura
-
-Chat entre cliente e prestador
-
-Agenda com horários disponíveis
-
-Avaliações e feedback
-
-Painel administrativo
-
-📫 Contato
-
-Ficou com dúvidas, sugestões ou quer saber mais sobre o projeto?Entre em contato com qualquer membro da equipe ou envie um e-mail para: cleanhouse@unifio.edu.br
+---
