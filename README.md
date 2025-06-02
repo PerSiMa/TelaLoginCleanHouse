@@ -21,87 +21,215 @@
 
 ## 📌 Sobre o Projeto
 
-O **Clean House** foi desenvolvido como parte do Projeto Integrador do curso de Engenharia de Software da UNIFIO (Centro Universitário de Ourinhos). O objetivo principal é simular uma **plataforma para contratação de serviços domésticos**, com foco em usabilidade, validação de dados e experiência do usuário.
-
----
-
-## 🧾 Funcionalidades do Cadastro
-
-### ✍️ Campos do Formulário
-
-- 📧 **Email**  
-- 👤 **Nome completo**  
-- 📱 **Telefone com DDD**  
-- 🆔 **CPF (com validação de dígitos)**  
-- 🔒 **Senha (mínimo de 6 caracteres + botão para visualização)**  
-- ☑️ **Checkbox de aceite dos Termos de Uso**
-
-### ✅ Regras de Validação
-
-- Formato de e-mail válido  
-- Nome com pelo menos dois termos  
-- Telefone com DDD  
-- CPF válido  
-- Senha segura  
-- Checkbox obrigatório para habilitar o botão "Cadastrar"
-
-### 🛠 Comportamento Esperado
-
-- Validação completa ao clicar em **Cadastrar**  
-- Exibição de **mensagem de sucesso**  
-- Redirecionamento para **dashboard** ou **perfil do usuário**
-
-### ✏️ Campos Editáveis
-
-Todos os campos podem ser atualizados na tela de perfil do usuário.
-
-### ❌ Ação de Cancelar
-
-Retorna para:
-- Tela inicial (home), ou  
-- Tela de login, conforme o fluxo anterior
+O **Clean House** é um projeto integrador do curso de Engenharia de Software da UNIFIO (Centro Universitário de Ourinhos). A plataforma simula a **contratação de serviços domésticos**, conectando clientes a empregadas domésticas com foco em usabilidade, validação de dados e experiência do usuário.
 
 ---
 
 ## 🏠 Tela Inicial (Home)
 
+### ✍️ Campos do Formulário
+
+- **Nota**: A tela inicial (`CleanHouseSwing`) não possui formulários diretos, mas os botões "Cadastre-se" e "Entre" levam a telas de cadastro (não implementadas no código atual). Campos inferidos com base no banco de dados:
+  - **Empregadas**:
+    - 📧 Email
+    - 👤 Nome completo
+    - 📱 Telefone com DDD
+    - 🆔 CPF
+    - 📍 Endereço (rua, número, complemento, bairro, cidade, estado, CEP)
+    - 📅 Data de nascimento
+    - 🖼️ Foto de perfil
+    - 📝 Descrição
+    - 💼 Serviços oferecidos (com preço por hora)
+    - 📄 Documentos (RG, CPF, comprovante de residência, atestado de antecedentes)
+  - **Clientes**:
+    - 📧 Email
+    - 👤 Nome completo
+    - 📱 Telefone com DDD
+    - 🆔 CPF
+    - 📍 Endereço (rua, número, complemento, bairro, cidade, estado, CEP)
+
+### ✅ Campos Obrigatórios
+
+- **Empregadas**:
+  - Nome
+  - CPF
+  - Email
+  - Tipo de documento
+  - URL do documento
+- **Clientes**:
+  - Nome
+  - CPF
+  - Email
+
+### 🛠 Regras de Validação
+
+- **CPF**: Formato `123.456.789-00`, validado por regex e algoritmo de dígitos verificadores.
+- **Email**: Formato válido (ex.: `nome@dominio.com`), verificado via regex.
+- **Telefone**: Formato `(DD) 9XXXX-XXXX`, com 11 dígitos.
+- **Data de Nascimento**: Idade mínima de 18 anos para empregadas.
+- **Documentos**: URLs devem apontar para arquivos válidos (ex.: PDF, imagens). Status (`pendente`, `aprovado`, `rejeitado`) atualizado por administradores.
+- **Nota**: Validações aplicáveis em telas de cadastro acessadas via "Cadastre-se" ou "Entre".
+
+### 🧑‍🔧 Listagem
+
+- **Seção "Profissionais"**:
+  - Colunas exibidas:
+    | Profissional | Especialidade | Foto |
+    |--------------|---------------|------|
+    | Devon Silva  | Manutenção    | 📷   |
+    | Emma Fisher  | Limpeza de Casa | 📷 |
+    | Eva Edwards  | Limpeza Comercial | 📷 |
+    | Edward Cooper | Cortador de Grama | 📷 |
+  - **Nota**: Dados estáticos no código atual; futura integração com tabela `Empregadas` e `Empregadas_Servicos`.
+- **Seção "Clientes"**:
+  - Colunas exibidas:
+    | Cliente | Depoimento | Avaliação |
+    |---------|------------|-----------|
+    | Courtney Henry | Aliquam et magna sit amet. | ⭐⭐⭐⭐⭐ |
+    | Darrell Steward | Aliquam et magna sit amet. | ⭐⭐⭐⭐⭐ |
+    | Jerome Bell | Aliquam et magna sit amet. | ⭐⭐⭐⭐⭐ |
+  - **Nota**: Depoimentos estáticos; futura integração com tabela `Avaliacoes`.
+
 ### 🔍 Campo de Busca
 
-Placeholder: `"Pesquise aqui"`  
-Funciona como uma **busca global**, permitindo filtros por:
+- **Nota**: Não implementado na tela inicial, mas o botão "Serviços" sugere acesso a uma tela com busca.
+- Placeholder sugerido: `"Pesquise por serviços ou localização"`.
+- Filtros futuros:
+  - 🏷️ Tipo de serviço (ex.: limpeza, cuidado infantil)
+  - 📍 Localidade (cidade, estado)
+  - 🔑 Palavra-chave (ex.: nome da empregada)
 
-- Tipo de serviço  
-- Nome do profissional  
-- Localidade  
-- Palavra-chave  
+### ✏️ Campos Editáveis
 
-### 🧑‍🔧 Listagem (Futura Implementação)
+- **Empregadas** (em tela de perfil, acessada via "Entre"):
+  - Nome, email, telefone, endereço, foto de perfil, descrição, serviços oferecidos, preço por hora, disponibilidade.
+- **Clientes**:
+  - Nome, email, telefone, endereço.
+- **Restrição**: CPF não editável (único e fixo).
 
-Colunas recomendadas:
+### 🛠 Comportamento Esperado (Edição)
 
-| Profissional | Especialidade | Localidade | Avaliação | Status |
-|--------------|---------------|------------|-----------|--------|
-| Maria Silva | Faxina Geral | Ourinhos/SP | ⭐⭐⭐⭐☆ | Ativo |
+1. Clicar em "Entre" na barra de navegação.
+2. Após login, redirecionamento para tela de perfil (não implementada).
+3. Editar campos (nome, email, etc.), validar dados e salvar no banco (`Empregadas`, `Clientes`, `Enderecos`).
+4. Exibir mensagem de sucesso e atualizar `ultima_atualizacao` no banco.
+5. Redirecionar para dashboard ou perfil.
 
-### 🎠 Cards Interativos
+### ❌ Ação de Cancelar/Exclusão
 
-- Navegação entre slides  
-- Abertura de detalhes do serviço/profissional  
-- Opção de **visualizar perfil** e **contratar serviço**
+- **Cancelamento**: Retorna à tela inicial ou de login.
+- **Exclusão**:
+  1. Acessar tela de perfil via "Entre".
+  2. Clicar em "Excluir Conta" (não implementado).
+  3. Confirmar exclusão.
+  4. Remover registros de `Empregadas` ou `Clientes`, respeitando `ON DELETE CASCADE`/`RESTRICT`.
+  5. Deslogar e redirecionar para a tela inicial.
+
+---
+
+## 🧑‍🔧 Tela de Lista de Empregadas
+
+### ✍️ Campos do Formulário
+
+- **Nota**: A tela (`CleanHouseEmployeesSwing`) é de exibição, mas o botão "Cadastre-se" leva a uma tela de cadastro com os mesmos campos da Tela Inicial.
+- Adicional para empregadas:
+  - 📅 Disponibilidade (dia da semana, hora de início, hora de fim)
+  - 💼 Experiência por serviço (em anos)
+
+### ✅ Campos Obrigatórios
+
+- Mesmos da Tela Inicial.
+- Para `Disponibilidades`:
+  - Dia da semana
+  - Hora de início
+  - Hora de fim
+- Para `Empregadas_Servicos`:
+  - Serviço
+  - Preço por hora (ou "Negociável")
+
+### 🛠 Regras de Validação
+
+- Mesmas validações da Tela Inicial.
+- **Disponibilidade**:
+  - Horários válidos (00:00–23:59).
+  - `hora_fim` posterior a `hora_inicio`.
+  - Sem sobreposição de horários no mesmo dia.
+- **Preço por Hora**: Decimal positivo ou "Negociável" (NULL no banco).
+- **Experiência**: Inteiro não negativo.
+
+### 🧑‍🔧 Listagem
+
+- Colunas exibidas:
+  | Profissional | Preço | Experiência | Disponibilidade | Dias | Foto |
+  |--------------|-------|-------------|-----------------|------|------|
+  | Barbara (30) | Negociável | 4 meses | Não | SE, TE, QA, SE, DO | 📷 |
+  | Eder (42)    | Negociável | 3 anos  | Não | SE, TE, QA, SE, DO | 📷 |
+  | ... (outros) | ...       | ...         | ... | ... | 📷 |
+- **Nota**: Dados estáticos; futura integração com `Empregadas`, `Empregadas_Servicos`, `Disponibilidades`. Campo "Disponível não" deve refletir `Disponibilidades`.
+
+### 🔍 Campo de Busca
+
+- Placeholder: `"Pesquise aqui"`.
+- Botão: "Procurar agora".
+- Filtros futuros:
+  - 🏷️ Tipo de serviço
+  - 📍 Localidade
+  - 💰 Faixa de preço
+  - 📅 Disponibilidade
+
+### ✏️ Campos Editáveis
+
+- Mesmos da Tela Inicial (em tela de perfil).
+- Adicional: Disponibilidade (editar dias e horários) e experiência por serviço.
+
+### 🛠 Comportamento Esperado (Edição)
+
+1. Clicar em "Entre" e acessar tela de perfil.
+2. Editar campos (nome, email, disponibilidade, etc.), validar e salvar.
+3. Exibir mensagem de sucesso e atualizar `ultima_atualizacao`.
+4. Retornar ao perfil ou dashboard.
+
+### ❌ Ação de Cancelar/Exclusão
+
+- **Cancelamento**: Retorna à tela inicial ou login.
+- **Exclusão**:
+  1. Acessar perfil via "Entre".
+  2. Clicar em "Excluir Conta".
+  3. Confirmar exclusão.
+  4. Remover registros de `Empregadas`, `Disponibilidades`, etc., respeitando regras do banco.
+  5. Deslogar e redirecionar para a tela inicial.
+
+---
 
 ## 🚀 Futuras Funcionalidades
 
-- Sistema de login completo com autenticação segura  
-- Chat entre cliente e prestador  
-- Agenda com horários disponíveis  
-- Avaliações e feedback  
-- Painel administrativo  
+- 🛡️ Login com autenticação segura.
+- 💬 Chat entre cliente e empregada (`Mensagens`).
+- 📅 Agenda com horários disponíveis (`Disponibilidades`).
+- ⭐ Sistema de avaliações bidirecionais (`Avaliacoes`).
+- 🛠️ Painel administrativo para validação de documentos.
+- 💸 Integração de pagamentos (`Pagamentos`).
+- 🔔 Notificações para eventos (ex.: nova contratação, mensagem).
 
 ---
 
 ## 📫 Contato
 
-Ficou com dúvidas, sugestões ou quer saber mais sobre o projeto?  
-Entre em contato com qualquer membro da equipe ou envie um e-mail para: **cleanhouse@unifio.edu.br**
+Dúvidas ou sugestões? Entre em contato com a equipe ou envie um e-mail para: **cleanhouse@unifio.edu.br**
+
+---
+
+### Notas Técnicas
+- **Integração com Banco**: As telas devem consultar o banco de dados (tabelas `Empregadas`, `Clientes`, `Disponibilidades`, etc.) para exibir dados dinâmicos.
+- **Problemas Atuais**:
+  - Imagens (ex.: `barbara.jpg`) requerem caminhos válidos.
+  - Disponibilidade ("Não") e checkboxes (SE, TE, etc.) devem usar `Disponibilidades`.
+- **Execução**:
+  ```bash
+  javac CleanHouseSwing.java
+  java CleanHouseSwing
+  javac CleanHouseEmployeesSwing.java
+  java CleanHouseEmployeesSwing
+  ```
 
 ---
